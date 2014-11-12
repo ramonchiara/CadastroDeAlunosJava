@@ -33,5 +33,14 @@ public class DaoArrayList implements Dao {
 
 		return resultado;
 	}
+	
+	@Override
+	public void atualizar(Aluno aluno) {
+		Aluno pesquisado = pesquisar(aluno.getMatricula());
+		
+		pesquisado.setNome(aluno.getNome());
+		pesquisado.setP1(aluno.getP1());
+		pesquisado.setP2(aluno.getP2());
+	}
 
 }

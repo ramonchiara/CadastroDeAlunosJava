@@ -11,5 +11,7 @@ public interface Dao {
 	ArrayList<Aluno> listar();
 
 	Aluno pesquisar(String matricula);
+	
+	void atualizar(Aluno aluno);
 
 }

@@ -2,6 +2,7 @@ package br.pro.ramon.oo.alunos;
 
 import java.util.Scanner;
 
+import br.pro.ramon.oo.alunos.menus.AtualizarAluno;
 import br.pro.ramon.oo.alunos.menus.ConsultarAluno;
 import br.pro.ramon.oo.alunos.menus.InserirAluno;
 import br.pro.ramon.oo.alunos.menus.ItemDeMenu;
@@ -17,6 +18,7 @@ public class Program {
 				new InserirAluno(),
 				new ListarAlunos(),
 				new ConsultarAluno(),
+				new AtualizarAluno(),
 				new Sair() 
 		};
 
