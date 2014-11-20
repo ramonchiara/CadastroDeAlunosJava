@@ -5,6 +5,10 @@ public class Aluno {
 	private String matricula, nome;
 	private double p1, p2;
 
+	public Aluno(String matricula) {
+		this(matricula, null);
+	}
+	
 	public Aluno(String matricula, String nome) {
 		this(matricula, nome, 0, 0);
 	}
@@ -56,4 +60,30 @@ public class Aluno {
 		return calcularMedia() >= 7.0;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((matricula == null) ? 0 : matricula.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (matricula == null) {
+			if (other.matricula != null)
+				return false;
+		} else if (!matricula.equals(other.matricula))
+			return false;
+		return true;
+	}
+	
 }

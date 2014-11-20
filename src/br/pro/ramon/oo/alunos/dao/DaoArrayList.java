@@ -42,5 +42,9 @@ public class DaoArrayList implements Dao {
 		pesquisado.setP1(aluno.getP1());
 		pesquisado.setP2(aluno.getP2());
 	}
+	
+	public void remover(Aluno aluno) {
+		bd.remove(aluno);
+	}
 
 }

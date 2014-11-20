@@ -13,5 +13,7 @@ public interface Dao {
 	Aluno pesquisar(String matricula);
 	
 	void atualizar(Aluno aluno);
+	
+	void remover(Aluno aluno);
 
 }

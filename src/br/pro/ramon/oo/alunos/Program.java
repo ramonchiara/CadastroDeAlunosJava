@@ -7,6 +7,7 @@ import br.pro.ramon.oo.alunos.menus.ConsultarAluno;
 import br.pro.ramon.oo.alunos.menus.InserirAluno;
 import br.pro.ramon.oo.alunos.menus.ItemDeMenu;
 import br.pro.ramon.oo.alunos.menus.ListarAlunos;
+import br.pro.ramon.oo.alunos.menus.RemoverAluno;
 import br.pro.ramon.oo.alunos.menus.Sair;
 
 public class Program {
@@ -19,6 +20,7 @@ public class Program {
 				new ListarAlunos(),
 				new ConsultarAluno(),
 				new AtualizarAluno(),
+				new RemoverAluno(),
 				new Sair() 
 		};
 
