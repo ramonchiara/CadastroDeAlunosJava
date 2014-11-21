@@ -6,7 +6,11 @@ import br.pro.ramon.oo.alunos.menus.AtualizarAluno;
 import br.pro.ramon.oo.alunos.menus.ConsultarAluno;
 import br.pro.ramon.oo.alunos.menus.InserirAluno;
 import br.pro.ramon.oo.alunos.menus.ItemDeMenu;
+import br.pro.ramon.oo.alunos.menus.ListarAlunosAprovados;
 import br.pro.ramon.oo.alunos.menus.ListarAlunos;
+import br.pro.ramon.oo.alunos.menus.ListarAlunosPorMedia;
+import br.pro.ramon.oo.alunos.menus.ListarAlunosPorNome;
+import br.pro.ramon.oo.alunos.menus.ListarAlunosReprovados;
 import br.pro.ramon.oo.alunos.menus.RemoverAluno;
 import br.pro.ramon.oo.alunos.menus.Sair;
 
@@ -17,10 +21,13 @@ public class Program {
 
 		ItemDeMenu[] principal = new ItemDeMenu[] { 
 				new InserirAluno(),
-				new ListarAlunos(),
+				new ListarAlunosPorNome(),
 				new ConsultarAluno(),
 				new AtualizarAluno(),
 				new RemoverAluno(),
+				new ListarAlunosAprovados(),
+				new ListarAlunosReprovados(),
+				new ListarAlunosPorMedia(),
 				new Sair() 
 		};
 

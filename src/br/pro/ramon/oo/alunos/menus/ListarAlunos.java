@@ -6,12 +6,7 @@ import java.util.Comparator;
 
 import br.pro.ramon.oo.alunos.modelos.Aluno;
 
-public class ListarAlunos extends ItemDeMenu implements Comparator<Aluno> {
-
-	@Override
-	public String getDescricao() {
-		return "Listar alunos";
-	}
+public abstract class ListarAlunos extends ItemDeMenu implements Comparator<Aluno> {
 
 	@Override
 	public boolean executar() {
@@ -21,11 +16,16 @@ public class ListarAlunos extends ItemDeMenu implements Comparator<Aluno> {
 
 		for (int i = 0; i < alunos.size(); i++) {
 			Aluno atual = alunos.get(i);
-			System.out.println(atual.getMatricula() + " - " + atual.getNome() + " - " + atual.calcularMedia());
+			
+			if (deveImprimir(atual)) {
+				System.out.println(atual.getMatricula() + " - " + atual.getNome() + " - " + atual.calcularMedia());
+			}
 		}
 
 		return false;
 	}
+	
+	public abstract boolean deveImprimir(Aluno aluno);
 
 	@Override
 	public int compare(Aluno o1, Aluno o2) {
